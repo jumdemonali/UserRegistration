@@ -5,14 +5,14 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     public static void main(String[] args) {
-        String input = "95031483";
-        String phoneRegex = "^[A-Za-z0-9]{8,}$";
-        Pattern pattern = Pattern.compile(phoneRegex);
+        String input = "Password123";
+        String passwordRegex = "^(?=.*[A-Z])[A-Za-z0-9]{8,}$";
+        Pattern pattern = Pattern.compile(passwordRegex);
         Matcher matcher = pattern.matcher(input);
         if (matcher.matches()) {
-            System.out.println("Valid phone number");
+            System.out.println("Valid Password");
         } else {
-            System.out.println("Invalid phone number");
+            System.out.println("Invalid Password");
         }
 
     }
