@@ -5,14 +5,14 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     public static void main(String[] args) {
-        String input = "abc.xyz@gmail.com.in";
-        String regex = "^[a-z0-9]+([_+-.][0-9a-z]+)*@[a-z]+.[a-z]{2,3}(.[a-z]{2}){0,1}$";
-        Pattern pattern = Pattern.compile(regex);
+        String input = "91 9503148575";
+        String phoneRegex = "^[0-9]{2}\\s{1}[0-9]{10}";
+        Pattern pattern = Pattern.compile(phoneRegex);
         Matcher matcher = pattern.matcher(input);
         if (matcher.matches()) {
-            System.out.println("Valid");
+            System.out.println("Valid phone number");
         } else {
-            System.out.println("Invalid");
+            System.out.println("Invalid phone number");
         }
 
     }
