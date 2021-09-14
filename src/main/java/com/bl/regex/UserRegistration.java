@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     public static void main(String[] args) {
-        String input = "91 9503148575";
-        String phoneRegex = "^[0-9]{2}\\s{1}[0-9]{10}";
+        String input = "95031483";
+        String phoneRegex = "^[A-Za-z0-9]{8,}$";
         Pattern pattern = Pattern.compile(phoneRegex);
         Matcher matcher = pattern.matcher(input);
         if (matcher.matches()) {
